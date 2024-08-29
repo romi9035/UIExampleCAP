@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/test/Opa5","sap/ui/CAPDemoUI/localService/mockserver","sap/ui/model/odata/v2/ODataModel"],function(a,t,e){"use strict";return a.extend("sap.ui.CAPDemoUI.test.integration.arrangements.Startup",{iStartMyApp:function(a){var e=a||{};this._clearSharedData();e.delay=e.delay||1;var i=t.init(e);this.iWaitForPromise(i);this.iStartMyUIComponent({componentConfig:{name:"sap.ui.CAPDemoUI",async:true},hash:e.hash,autoWait:e.autoWait})},_clearSharedData:function(){e.mSharedData={server:{},service:{},meta:{}}}})});
+//# sourceMappingURL=Startup.js.map

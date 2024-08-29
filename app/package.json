@@ -1,0 +1,27 @@
+{
+  "name": "CAPDemoUI",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "ui5 build",
+    "serve": "ui5 serve -o index.html",
+    "start": "node node_modules/@sap/approuter/approuter.js"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^3.11.0",
+    "ui5-middleware-simpleproxy": "^0.2.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-simpleproxy"
+    ]
+  },
+  "dependencies": {
+    "@sap/approuter": "^16.6.0",
+    "@sap/cds-dk": "^7.9.4",
+    "approuter": "^0.0.1-security",
+    "npmrc": "^1.1.1",
+    "passport": "^0.7.0",
+    "@sap/xssec": "^3"
+  }
+}

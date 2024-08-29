@@ -1,0 +1,36 @@
+{  "authenticationMethod": "route",
+  "logout": {
+    "logoutEndpoint": "/do/logout"
+  },
+  "routes": [
+    {
+      "source": "/browse/(.*)$",
+      "target": "/browse/$1",
+      "authenticationType": "xsuaa",
+      "destination": "srv-api",
+      "csrfProtection": true
+    },
+    {
+      "source": "/v2/(.*)$",
+      "target": "/v2/$1",
+      "authenticationType": "xsuaa",
+      "destination": "srv-api",
+      "csrfProtection": true
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "localDir": "."
+    },
+    {
+      "source": "^/appdebug/(.*)$",
+      "target": "$1",
+      "localDir": "webapp"
+    },
+    {
+      "source": "^/appconfig/",
+      "localDir": ".",
+      "cacheControl": "no-cache, no-store, must-revalidate"
+    }
+  ]
+}
